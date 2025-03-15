@@ -9,20 +9,22 @@ void time_table(char section) {
         char command[100];
         snprintf(command, sizeof(command), "start %s", imagePath);
         system(command);
-    return ;}
+    return 0;}
 
     else if(section == 'b' || section == 'B'){
     const char* imagePath = "C:/Users/sagar/Desktop/levi.jpeg";
         char command[100];
         snprintf(command, sizeof(command), "start %s", imagePath);
         system(command);
-    return ;}
+    return 0;}
 
     else{
         printf("\033[1;31m");
         printf("Invalid!\n");
 	    printf("\033[1;32m");
         printf("Enter Section(A/B):");
+        fflush(stdin);
+        getchar();
             scanf("%c",&section);
                 time_table(section);
         }

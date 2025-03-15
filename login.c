@@ -7,22 +7,24 @@ struct usrdata
     char password[50];
 } user1, check;
 
+int wrong = 0;
+
 void signup()
 {
     FILE *fp = fopen("userdata.txt", "a+");
     char userid[20], password[20], confirm[20];
-    printf("Enter your user-id\n");
+    printf("Enter your user-id: ");
     getchar();
     gets(userid);
-    printf("Enter your password\n");
+    printf("Enter your password: ");
     gets(password);
-    printf("Confirm your password\n");
+    printf("Confirm your password: ");
     // getchar();
     gets(confirm);
 
     if (strcmp(password, confirm) == 0)
     {
-        fprintf(fp, "%s\t%s", userid, password);
+        fprintf(fp, "%s\t%s\n", userid, password);
         printf("\033[1;36m");
         printf("New user successfully created!...  Remember your credentials.");
 	    printf("\033[1;32m");
@@ -58,10 +60,9 @@ void login()
     fclose(fp);
     if (!found)
     {
-        printf("\033[1;31m");
-        printf("Invalid id or password\n");
-        printf("\033[1;32m");
+        wrong = 1;
         main();
+
     }
 }
 
