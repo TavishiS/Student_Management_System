@@ -7,8 +7,7 @@ This is a Student Management System, providing various functionalities for colle
 6. show_all_students(FILE *file);<br />
 7. delete_student_by_id(FILE *file, char delete_id[8]);<br />
 8. find_student_by_id(FILE *file, char find_id[]);<br />
-9. find_student_by_name(FILE *file, char name[]);<br />
-10.find_max_gpa(FILE *file);<br />
+9. find_student_by_name(FILE *file, char name[]);<br />10.find_max_gpa(FILE *file);<br />
 11.find_min_gpa(FILE *file);<br />
 12.find_max_age(FILE *file);<br />
 13.find_min_age(FILE *file);<br />
