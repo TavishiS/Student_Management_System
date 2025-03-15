@@ -18,4 +18,8 @@ This is a Student Management System, providing various functionalities for colle
 17. sort_list_student_by_name_z_a(FILE *file);<br />
 18. sort_list_student_by_gpa_0_10(FILE *file);<br />
 19. sort_list_student_by_gpa_10_0(FILE *file);<br />
-20. press_any_key();
+20. press_any_key();<br /><br />
+
+The file temp.c is the main C file, which imports the files: login.c and time_table_view.c.<br />
+The file MANGA.txt stores the student details such as: Name, ID, Marks, Pass/Fail, and Gender.<br />
+The file userdata.txt stores the names of students and their IDs, mainly used for authenticating users.<br />
